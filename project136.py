@@ -10,12 +10,12 @@ def index():
         "message":"success"
     }), 200
 
-@app.route("/planet")
-def planet():
+@app.route("/star")
+def star():
     name = request.args.get("name")
-    planet_data = next(item for item in data if item["name"] == name)
+    star_data = next(item for item in data if item["name"] == name)
     return jsonify({
-        "data":planet_data,
+        "data":star_data,
         "message":"success"
     }), 200
 
